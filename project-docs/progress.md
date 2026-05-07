@@ -43,3 +43,9 @@
 - Updated the homepage `Guide` section to match the provided "What To Do If You've Been Scammed" reference.
 - Added three recovery cards for `Secure Accounts`, `Report Incident`, and `Gather Evidence` with dark-blue headers and bullet guidance.
 - Verification: served the app with `python3 -m http.server 4173` and confirmed `HTTP/1.0 200 OK` for `/`.
+
+## 2026-05-07
+
+- Reordered the homepage content to match the provided full-page reference: `Our Features`, `What To Do If You've Been Scammed`, then `How It Works`.
+- Tightened section widths, typography, card sizing, and grid spacing so the feature, recovery, and process sections render as centered narrow content blocks.
+- Verification: served the app with `python3 -m http.server 4173` and confirmed `HTTP/1.0 200 OK` for `/`.
