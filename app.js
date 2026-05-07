@@ -130,13 +130,13 @@ const routeMap = {
   features: "home",
   "how-it-works": "home",
   "scam-types": "scam-types",
-  guide: "home",
+  guide: "guide",
   privacy: "privacy",
   terms: "terms",
   ai: "about",
 };
 
-const scrollTargets = new Set(["check", "features", "how-it-works", "guide"]);
+const scrollTargets = new Set(["check", "features", "how-it-works"]);
 
 const showView = (rawName) => {
   const name = routeMap[rawName] || rawName || "home";

@@ -441,6 +441,154 @@ textarea {
   text-align: center;
 }
 
+.guide-page {
+  max-width: 1580px;
+  margin: 0 auto;
+  padding: 76px clamp(28px, 7vw, 150px) 70px;
+}
+
+.guide-page h1 {
+  margin-bottom: 56px;
+  color: var(--brand-blue);
+  font-size: clamp(3rem, 4.8vw, 5rem);
+  line-height: 1.08;
+  text-align: center;
+}
+
+.guide-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 34px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 10px 22px rgba(24, 37, 56, 0.08);
+}
+
+.guide-tabs button {
+  min-height: 58px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #47566d;
+  font-size: 1.1rem;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.guide-tabs button.active {
+  background: var(--brand-blue);
+  color: white;
+}
+
+.guide-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.security-guide-card {
+  position: relative;
+  min-height: 276px;
+  padding: 30px 30px 30px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 12px 24px rgba(24, 37, 56, 0.08);
+}
+
+.guide-whatsapp {
+  border-color: #c8f0d6;
+}
+
+.guide-sms {
+  border-color: #f5dda5;
+}
+
+.guide-social {
+  border-color: #cfe3ff;
+}
+
+.guide-email {
+  border-color: #f2d6bf;
+}
+
+.guide-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.guide-card-heading span {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #eef6ff;
+  color: var(--brand-blue);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.guide-whatsapp .guide-card-heading span {
+  background: #e6fbec;
+  color: #22c55e;
+}
+
+.guide-sms .guide-card-heading span {
+  background: #fff2d3;
+  color: #d99a16;
+}
+
+.guide-social .guide-card-heading span {
+  background: #edf4ff;
+  color: #367cff;
+}
+
+.guide-email .guide-card-heading span {
+  background: #fff0e6;
+  color: #c97b40;
+}
+
+.guide-card-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(1.5rem, 2vw, 1.85rem);
+}
+
+.security-guide-card ul {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 0 156px 0 0;
+  list-style: none;
+}
+
+.security-guide-card li {
+  color: #344258;
+  font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+  line-height: 1.35;
+}
+
+.security-guide-card button {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  min-width: 112px;
+  min-height: 56px;
+  border: 2px solid var(--brand-blue);
+  border-radius: 16px;
+  background: white;
+  color: var(--brand-blue);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .check-shell .analysis-panel {
   max-width: 780px;
   margin: 0 auto;
@@ -1006,6 +1154,7 @@ input:focus {
   .support-grid,
   .recovery-grid,
   .scam-type-grid,
+  .guide-card-grid,
   .result-sections,
   .flow-grid,
   .metrics-grid {
@@ -1049,6 +1198,19 @@ input:focus {
   .scam-type-card {
     grid-template-columns: 1fr;
     align-items: start;
+  }
+
+  .guide-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .security-guide-card ul {
+    padding-right: 0;
+  }
+
+  .security-guide-card button {
+    position: static;
+    margin-top: 24px;
   }
 
   .gauge {
