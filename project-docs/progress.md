@@ -56,3 +56,10 @@
 - Added the standalone `The Mechanics Of Scams` page with scam type cards for romance, bank, phishing, shopping, customer service, delivery, lottery, and charity scams.
 - Updated routing so the header `Scam Types` link opens the standalone page instead of scrolling within Home.
 - Verification: served the app with `python3 -m http.server 4173` and confirmed `HTTP/1.0 200 OK` for `/`.
+
+## 2026-05-07
+
+- Added a standalone `Security Guides & Anti-Fraud Center` page for the header `Guide` link.
+- Kept the existing homepage guide/recovery section unchanged.
+- Updated routing so `Guide` opens the new page instead of scrolling back to the homepage.
+- Verification: served the app with `python3 -m http.server 4173` and confirmed `HTTP/1.0 200 OK` for `/`.
