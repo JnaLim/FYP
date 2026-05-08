@@ -1,5 +1,12 @@
 # Progress Log
 
+## 2026-05-08
+
+- Updated the homepage checking panel empty-state error handling to match the provided references.
+- Added red inline alert styling for validation errors below the active input area and before the `Check Now` button.
+- Updated Home image and voice tabs to show the requested upload/dropzone empty states, and simplified the Home URL tab placeholder.
+- Verification: static page and updated error strings were checked after serving the site locally.
+
 ## 2026-05-07
 
 - Restored the repository from a state where tracked files were marked deleted.
