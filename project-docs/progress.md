@@ -118,3 +118,9 @@
 - Each modal shows the selected scam title, summary, scam details list, Close action, and Start Analysis action.
 - `Start Analysis` now closes the modal and routes to the standalone `#check` page.
 - Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains scam learn buttons, modal markup, Scam Details, and the `#check` Start Analysis link.
+
+## 2026-05-08
+
+- Added Guide page `Learn` modal behavior for all Platform Guides and Banking Guides cards.
+- Reused the existing detail modal pattern with guide-specific summaries, details, Close action, and `Start Analysis` route to `#check`.
+- Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains guide learn buttons, modal markup, and the `#check` Start Analysis link.
