@@ -92,3 +92,9 @@
 - Added FAQ accordion cards matching the provided reference: category pills, circular icons, chevrons, expandable answers, and support note.
 - Added single-open-item FAQ behavior so opening one question closes the others.
 - Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains the FAQ view and FAQ route link.
+
+## 2026-05-08
+
+- Replaced the old short Privacy Policy content with the provided long-form privacy page layout.
+- Added the shield hero, policy sections, separators, contact information, and educational Important Notice panel.
+- Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains the Privacy Policy view, key sections, and Important Notice.
