@@ -85,3 +85,10 @@
 - Added a three-column footer with VETO branding, Product links, Support links, divider, copyright, and closing tagline.
 - Separated footer styling from the sticky header styling so the footer renders as a normal page footer.
 - Verification: served the app with `python3 -m http.server 4173` and confirmed `HTTP/1.0 200 OK` for `/`.
+
+## 2026-05-08
+
+- Replaced the old FAQ support link target with a standalone FAQ page at `#faq`.
+- Added FAQ accordion cards matching the provided reference: category pills, circular icons, chevrons, expandable answers, and support note.
+- Added single-open-item FAQ behavior so opening one question closes the others.
+- Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains the FAQ view and FAQ route link.

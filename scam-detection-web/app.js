@@ -120,6 +120,7 @@ const routeMap = {
   "how-it-works": "home",
   "scam-types": "scam-types",
   guide: "guide",
+  faq: "faq",
   privacy: "privacy",
   terms: "terms",
   ai: "about",
@@ -305,6 +306,23 @@ document.querySelectorAll("[data-guide-tab]").forEach((button) => {
     document.querySelectorAll("[data-guide-panel]").forEach((panel) => {
       panel.classList.toggle("active", panel.dataset.guidePanel === selectedTab);
     });
+  });
+});
+
+document.querySelectorAll("[data-faq-toggle]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".faq-item");
+    const isActive = item.classList.contains("active");
+
+    document.querySelectorAll(".faq-item").forEach((faqItem) => {
+      faqItem.classList.remove("active");
+      faqItem.querySelector("[data-faq-toggle]").setAttribute("aria-expanded", "false");
+    });
+
+    if (!isActive) {
+      item.classList.add("active");
+      button.setAttribute("aria-expanded", "true");
+    }
   });
 });
 
