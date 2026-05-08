@@ -2,6 +2,12 @@
 
 ## 2026-05-08
 
+- Added a confirmation step before clearing all local history records from the View History page.
+- `Clear All` now shows the browser confirmation dialog with `Are you sure you want to clear all history?`; choosing Cancel keeps existing records, and choosing OK clears them.
+- Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served JavaScript contains the confirmation message.
+
+## 2026-05-08
+
 - Updated the homepage checking panel empty-state error handling to match the provided references.
 - Added red inline alert styling for validation errors below the active input area and before the `Check Now` button.
 - Updated Home image and voice tabs to show the requested upload/dropzone empty states, and simplified the Home URL tab placeholder.
