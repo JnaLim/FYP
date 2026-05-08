@@ -615,6 +615,8 @@ document.querySelector("#history-list").addEventListener("click", (event) => {
 });
 
 document.querySelector("#clear-history").addEventListener("click", () => {
+  const shouldClear = window.confirm("Are you sure you want to clear all history?");
+  if (!shouldClear) return;
   saveHistory([]);
   renderHistory();
 });
