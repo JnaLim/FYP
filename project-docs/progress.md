@@ -98,3 +98,9 @@
 - Replaced the old short Privacy Policy content with the provided long-form privacy page layout.
 - Added the shield hero, policy sections, separators, contact information, and educational Important Notice panel.
 - Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains the Privacy Policy view, key sections, and Important Notice.
+
+## 2026-05-08
+
+- Replaced the old short Terms of Service content with the provided long-form terms page layout.
+- Added the document hero, legal sections, separators, contact information, and Important Disclaimer panel.
+- Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains the Terms of Service view, key sections, and Important Disclaimer.
