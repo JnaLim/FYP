@@ -2,6 +2,8 @@
 
 ## 2026-06-03
 
+- Updated the main Check page panel to match the provided references: wider centered card, compact tab bar, URL-only input state, large image/voice upload dropzones, aligned benefit cards, and matching spacing.
+- Kept the existing mock OCR/STT flow intact by hiding the generated transcript textareas on the main Check page while still allowing JavaScript to populate and analyze them.
 - Updated the result page to match the provided Safe, Suspicious, and Dangerous result references.
 - Reworked the result output into a status-colored summary card, risk score ring, analysis details card, highlighted terms, and recommended action card.
 - Adjusted image and voice scoring boosts so the demo OCR/STT flows can display the intended Suspicious and Dangerous result states.
