@@ -2,6 +2,7 @@
 
 ## 2026-06-03
 
+- Reduced the homepage hero, quick checking panel, and illustration scale so the Home page aligns more closely with the narrower How It Works section rhythm.
 - Applied the same uploaded file review step to the Home quick checking panel so image and voice uploads show the selected filename and editable extracted text before analysis.
 - Added the uploaded file review step on the main Check page for image OCR and voice STT flows, showing the selected filename and a user-editable extracted text box before analysis.
 - Updated the main Check page panel to match the provided references: wider centered card, compact tab bar, URL-only input state, large image/voice upload dropzones, aligned benefit cards, and matching spacing.
