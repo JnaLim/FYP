@@ -1,5 +1,11 @@
 # Progress Log
 
+## 2026-06-04
+
+- Published the local `main` branch to the user's GitHub repository at `https://github.com/JnaLim/FYP.git` for version control.
+- Preserved the original Superpowers remote as `upstream` and set the user's repository as `origin`.
+- Verification: confirmed `main` tracks `origin/main` and `git remote -v` shows `origin` as `JnaLim/FYP`.
+
 ## 2026-06-03
 
 - Re-aligned the Home hero, Home content sections, and Scam Types mechanics page to the same horizontal gutter as the header logo.

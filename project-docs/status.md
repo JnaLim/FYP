@@ -2,7 +2,8 @@
 
 ## Current State
 
-- Repository: `obra/superpowers`
+- Repository: `JnaLim/FYP`
+- Upstream reference: `obra/superpowers`
 - Main project rule file: `AGENTS.md`
 - Project memory folder: `project-docs/`
 - Current prototype app: `scam-detection-web/`
@@ -11,6 +12,7 @@
 ## Current Branch
 
 - Branch: `main`
+- Remote: `origin` tracks `https://github.com/JnaLim/FYP.git`
 - Short-term worktrees: none active.
 
 ## Near-Term Goals
