@@ -315,7 +315,7 @@ const routeMap = {
   faq: "faq",
   privacy: "privacy",
   terms: "terms",
-  ai: "about",
+  cookies: "cookies",
 };
 
 const scrollTargets = new Set(["features", "how-it-works"]);
@@ -628,8 +628,14 @@ document.querySelectorAll("[data-faq-toggle]").forEach((button) => {
 });
 
 const scamModal = document.querySelector("#scam-modal");
+const supportModal = document.querySelector("#support-modal");
 const closeScamModal = () => {
   scamModal.hidden = true;
+  document.body.classList.remove("modal-open");
+};
+
+const closeSupportModal = () => {
+  supportModal.hidden = true;
   document.body.classList.remove("modal-open");
 };
 
@@ -640,6 +646,11 @@ const openDetailModal = (detail) => {
     .map((item) => `<li>${item}</li>`)
     .join("");
   scamModal.hidden = false;
+  document.body.classList.add("modal-open");
+};
+
+const openSupportModal = () => {
+  supportModal.hidden = false;
   document.body.classList.add("modal-open");
 };
 
@@ -665,8 +676,15 @@ document.querySelectorAll("[data-scam-close]").forEach((button) => {
 
 document.querySelector("#scam-start-analysis").addEventListener("click", closeScamModal);
 
+document.querySelector("[data-support-open]").addEventListener("click", openSupportModal);
+
+document.querySelectorAll("[data-support-close]").forEach((button) => {
+  button.addEventListener("click", closeSupportModal);
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !scamModal.hidden) closeScamModal();
+  if (event.key === "Escape" && !supportModal.hidden) closeSupportModal();
 });
 
 const showFileReview = (form, type, file) => {

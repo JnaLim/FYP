@@ -172,3 +172,103 @@
 - Added Guide page `Learn` modal behavior for all Platform Guides and Banking Guides cards.
 - Reused the existing detail modal pattern with guide-specific summaries, details, Close action, and `Start Analysis` route to `#check`.
 - Verification: served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, and checked the served HTML contains guide learn buttons, modal markup, and the `#check` Start Analysis link.
+
+## 2026-06-09
+
+- Reduced the Guide page tab and card scale to better match the requested compact layout.
+- Tightened the guide container width, card height, spacing, icon circles, headings, list text, and `Learn` buttons while preserving the existing two-column design.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Reduced the Scam Types page card scale to match the more compact Guide page proportions.
+- Tightened the mechanics page width, card gaps, card height, icon blocks, titles, descriptions, and `Learn` buttons without changing modal behavior.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Reduced the View History page scale to match the compact Guide and Scam Types updates.
+- Tightened the history page width, title spacing, record cards, icons, metadata pills, action buttons, empty state, and local-storage note without changing history behavior.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Reduced the page title size for The Mechanics Of Scams, Security Guides & Anti-Fraud Center, and Check History.
+- Tightened the title spacing so the compact page layouts stay aligned with the smaller card scale.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Reduced the Terms of Service page title size with a Terms-only CSS override.
+- Kept the shared legal page icon, subtitle, content spacing, and Privacy Policy title unchanged.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Reduced the FAQ accordion scale so each question card appears smaller and less tall.
+- Tightened the FAQ page width, heading size, card padding, icon size, category pill size, question text, chevron, and answer spacing without changing accordion behavior.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Reduced the Terms of Service content section scale with Terms-only CSS overrides.
+- Tightened the Terms content width, section spacing, section headings, and body text without changing Privacy Policy content.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Reduced the Privacy Policy content section scale with Privacy-only CSS overrides.
+- Matched the smaller legal content width, section spacing, heading size, and body text used by the compact Terms page.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-09
+
+- Corrected the Privacy Policy content scaling to target the actual `.privacy-content` markup.
+- Removed the unused Privacy `.legal-content` override so the Privacy content now matches the Terms of Service content area size.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/` and `/styles.css`.
+
+## 2026-06-14
+
+- Added a dedicated Cookie Settings page and changed the footer Cookie Settings link from the old AI statement page to `#cookies`.
+- Matched the Privacy Policy hero title and Cookie Settings legal content scale to the compact Terms of Service page.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`.
+
+## 2026-06-15
+
+- Matched the Privacy Policy hero spacing to the FAQ page by tightening the title/subtitle gap, subtitle scale, and hero-to-content spacing.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`.
+
+## 2026-06-15
+
+- Reduced the Privacy Policy content scale further by tightening the content width, section spacing, heading size, and paragraph size.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, and confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`.
+
+## 2026-06-15
+
+- Matched the Terms of Service and Cookie Settings legal content scale to the smaller Privacy Policy content size.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`, then stopped the local preview server.
+
+## 2026-06-16
+
+- Changed the FAQ page Contact Support action from an inactive page link into a support contact modal.
+- Added support email, phone details, and a Send Email action using `mailto:` while preserving the existing modal styling pattern.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`, then stopped the local preview server.
+
+## 2026-06-16
+
+- Removed the hero icons from the Privacy Policy, Terms of Service, and Cookie Settings pages.
+- Cleaned up the now-unused Privacy and legal icon CSS rules.
+- Verification: ran `rg` to confirm `privacy-icon` and `legal-icon` were removed, ran `git diff --check`, served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`, then stopped the local preview server.
+
+## 2026-06-16
+
+- Removed the AI Statement transparency page from the single-page app.
+- Removed the old `#ai` route mapping so it no longer points to a deleted view.
+- Verification: ran `rg` to confirm the AI Statement page and `#ai` route mapping were removed, ran `git diff --check`, served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`, then stopped the local preview server.
+
+## 2026-06-16
+
+- Matched the Terms of Service and Cookie Settings hero spacing to the Privacy Policy page after the legal page icons were removed.
+- Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`, then stopped the local preview server.
+- Removed the Privacy Policy, Terms of Service, and Cookie Settings bottom notice/disclaimer boxes to match the requested legal page layout.
+- Verification: ran `rg` to confirm `Prototype Notice`, `Important Disclaimer`, and `Important Notice` were removed from `index.html`, then ran `git diff --check`.

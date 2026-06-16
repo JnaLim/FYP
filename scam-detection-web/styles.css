@@ -366,14 +366,15 @@ textarea {
 
 .mechanics-page {
   width: 100%;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 44px clamp(28px, 7vw, 150px) 64px;
+  padding: 44px clamp(24px, 5vw, 96px) 64px;
 }
 
 .mechanics-page h1 {
-  margin-bottom: 54px;
+  margin-bottom: 44px;
   color: var(--brand-blue);
-  font-size: clamp(3.2rem, 4.4vw, 5.7rem);
+  font-size: clamp(2.8rem, 3.6vw, 4.25rem);
   line-height: 1.05;
   text-align: center;
 }
@@ -381,18 +382,18 @@ textarea {
 .scam-type-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px 34px;
+  gap: 22px;
 }
 
 .scam-type-card {
   display: grid;
-  grid-template-columns: 88px minmax(0, 1fr) auto;
-  gap: 22px;
+  grid-template-columns: 70px minmax(0, 1fr) auto;
+  gap: 18px;
   align-items: center;
-  min-height: 136px;
-  padding: 30px 30px;
+  min-height: 116px;
+  padding: 24px;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 14px;
   background: white;
   box-shadow: 0 12px 24px rgba(24, 37, 56, 0.08);
 }
@@ -400,37 +401,38 @@ textarea {
 .scam-type-icon {
   display: grid;
   place-items: center;
-  width: 66px;
-  height: 66px;
+  width: 54px;
+  height: 54px;
   border: 1px solid #bad6ee;
-  border-radius: 16px;
+  border-radius: 14px;
   background: #eaf4ff;
   color: var(--brand-blue);
-  font-size: 2rem;
+  font-size: 1.55rem;
   font-weight: 900;
 }
 
 .scam-type-card h2 {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #121a2a;
-  font-size: clamp(1.55rem, 2vw, 1.95rem);
+  font-size: clamp(1.28rem, 1.55vw, 1.55rem);
   line-height: 1.1;
 }
 
 .scam-type-card p {
   margin: 0;
   color: #47566d;
-  font-size: clamp(1rem, 1.25vw, 1.24rem);
+  font-size: clamp(0.95rem, 1.08vw, 1.08rem);
   line-height: 1.45;
 }
 
 .scam-type-card button {
-  min-width: 110px;
-  min-height: 44px;
+  min-width: 104px;
+  min-height: 40px;
   border: 2px solid var(--brand-blue);
-  border-radius: 16px;
+  border-radius: 13px;
   background: white;
   color: var(--brand-blue);
+  font-size: 0.9rem;
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
@@ -582,16 +584,74 @@ textarea {
   color: white;
 }
 
+.support-modal-card {
+  width: min(560px, 100%);
+}
+
+.support-modal-body {
+  padding: 26px;
+}
+
+.support-contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.support-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f8fafc;
+  color: #1f2a3d;
+  text-decoration: none;
+}
+
+.support-contact-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #eaf2ff;
+  color: #2563eb;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.support-contact-copy {
+  display: grid;
+  gap: 3px;
+}
+
+.support-contact-copy span {
+  color: #7b8798;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.support-contact-copy strong {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 850;
+}
+
 .guide-page {
-  max-width: 1580px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 44px clamp(28px, 7vw, 150px) 64px;
+  padding: 44px clamp(24px, 5vw, 96px) 64px;
 }
 
 .guide-page h1 {
-  margin-bottom: 56px;
+  margin-bottom: 44px;
   color: var(--brand-blue);
-  font-size: clamp(3rem, 4.4vw, 5rem);
+  font-size: clamp(2.7rem, 3.55vw, 4.1rem);
   line-height: 1.08;
   text-align: center;
 }
@@ -599,22 +659,22 @@ textarea {
 .guide-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 34px;
-  padding: 10px;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 8px;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 14px;
   background: white;
   box-shadow: 0 10px 22px rgba(24, 37, 56, 0.08);
 }
 
 .guide-tabs button {
-  min-height: 50px;
+  min-height: 46px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 10px;
   background: transparent;
   color: #47566d;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 850;
   cursor: pointer;
 }
@@ -627,7 +687,7 @@ textarea {
 .guide-card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 22px;
 }
 
 .guide-panel {
@@ -640,10 +700,10 @@ textarea {
 
 .security-guide-card {
   position: relative;
-  min-height: 276px;
-  padding: 30px 30px 30px;
+  min-height: 230px;
+  padding: 24px 24px 24px;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 14px;
   background: white;
   box-shadow: 0 12px 24px rgba(24, 37, 56, 0.08);
 }
@@ -667,19 +727,19 @@ textarea {
 .guide-card-heading {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 28px;
+  gap: 14px;
+  margin-bottom: 22px;
 }
 
 .guide-card-heading span {
   display: grid;
   place-items: center;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #eef6ff;
   color: var(--brand-blue);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 900;
 }
 
@@ -742,42 +802,44 @@ textarea {
 .guide-card-heading h2 {
   margin: 0;
   color: #111827;
-  font-size: clamp(1.5rem, 2vw, 1.85rem);
+  font-size: clamp(1.28rem, 1.55vw, 1.55rem);
+  line-height: 1.12;
 }
 
 .security-guide-card ul {
   display: grid;
-  gap: 22px;
+  gap: 16px;
   margin: 0;
-  padding: 0 156px 0 0;
+  padding: 0 132px 0 0;
   list-style: none;
 }
 
 .security-guide-card li {
   color: #344258;
-  font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+  font-size: clamp(0.95rem, 1.08vw, 1.08rem);
   line-height: 1.35;
 }
 
 .security-guide-card button {
   position: absolute;
-  right: 28px;
-  bottom: 28px;
-  min-width: 112px;
-  min-height: 44px;
+  right: 24px;
+  bottom: 24px;
+  min-width: 104px;
+  min-height: 40px;
   border: 2px solid var(--brand-blue);
-  border-radius: 16px;
+  border-radius: 13px;
   background: white;
   color: var(--brand-blue);
+  font-size: 0.9rem;
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .faq-page {
-  max-width: 1160px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 92px 24px 78px;
+  padding: 44px clamp(24px, 5vw, 96px) 64px;
 }
 
 .faq-heading {
@@ -785,41 +847,40 @@ textarea {
 }
 
 .faq-heading h1 {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: #111827;
-  font-size: clamp(2.8rem, 4.1vw, 4.05rem);
+  font-size: clamp(2.35rem, 3.35vw, 3.35rem);
   line-height: 1.08;
 }
 
 .faq-heading p {
   margin: 0;
   color: #4f5d72;
-  font-size: clamp(1.1rem, 1.45vw, 1.35rem);
-  font-weight: 600;
+  font-size: clamp(1rem, 1.25vw, 1.16rem);
 }
 
 .faq-list {
   display: grid;
-  gap: 16px;
-  margin-top: 42px;
+  gap: 14px;
+  margin-top: 34px;
 }
 
 .faq-item {
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 15px;
   background: white;
   box-shadow: 0 8px 18px rgba(24, 37, 56, 0.08);
 }
 
 .faq-question {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr) 28px;
-  gap: 18px;
+  grid-template-columns: 44px minmax(0, 1fr) 24px;
+  gap: 16px;
   align-items: center;
   width: 100%;
-  min-height: 116px;
-  padding: 22px 28px;
+  min-height: 92px;
+  padding: 18px 24px;
   border: 0;
   background: transparent;
   color: var(--text);
@@ -830,14 +891,14 @@ textarea {
 .faq-icon {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
 .faq-icon svg {
-  width: 25px;
-  height: 25px;
+  width: 21px;
+  height: 21px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -865,17 +926,17 @@ textarea {
 
 .faq-copy {
   display: grid;
-  gap: 10px;
+  gap: 8px;
   justify-items: start;
 }
 
 .faq-pill {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
-  padding: 0 14px;
+  min-height: 26px;
+  padding: 0 12px;
   border-radius: 999px;
-  font-size: 0.94rem;
+  font-size: 0.82rem;
   font-weight: 850;
 }
 
@@ -899,14 +960,14 @@ textarea {
 
 .faq-copy strong {
   color: #111827;
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
   line-height: 1.22;
 }
 
 .faq-chevron {
   position: relative;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   justify-self: end;
 }
 
@@ -914,8 +975,8 @@ textarea {
 .faq-chevron::after {
   content: "";
   position: absolute;
-  top: 10px;
-  width: 11px;
+  top: 8px;
+  width: 9px;
   height: 3px;
   border-radius: 999px;
   background: #94a3b8;
@@ -943,7 +1004,7 @@ textarea {
 .faq-answer {
   display: none;
   border-top: 1px solid var(--border);
-  padding: 28px 90px 30px;
+  padding: 22px 76px 24px;
 }
 
 .faq-item.active .faq-answer {
@@ -953,9 +1014,9 @@ textarea {
 .faq-answer p {
   margin: 0;
   color: #526075;
-  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  font-size: clamp(0.95rem, 1.18vw, 1.08rem);
   font-weight: 600;
-  line-height: 1.85;
+  line-height: 1.75;
 }
 
 .faq-support {
@@ -972,10 +1033,19 @@ textarea {
   margin: 0;
 }
 
-.faq-support a {
+.faq-support a,
+.faq-support-link {
   color: #1f3f60;
   font-weight: 900;
   text-decoration: none;
+}
+
+.faq-support-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
 }
 
 .faq-support span {
@@ -2122,29 +2192,29 @@ input:focus {
 
 .history-list {
   display: grid;
-  gap: 22px;
-  margin-top: 46px;
+  gap: 18px;
+  margin-top: 34px;
 }
 
 .history-item {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) auto;
-  gap: 18px;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  gap: 16px;
   align-items: center;
-  min-height: 138px;
-  padding: 24px 30px;
+  min-height: 112px;
+  padding: 20px 24px;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 14px;
   background: white;
   box-shadow: 0 10px 22px rgba(24, 37, 56, 0.08);
 }
 
 .type-icon {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
-  border-radius: 12px;
+  border-radius: 11px;
   background: #eef4ff;
   color: #2f7cff;
   font-weight: 900;
@@ -2166,8 +2236,8 @@ input:focus {
 }
 
 .type-icon svg {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -2177,15 +2247,15 @@ input:focus {
 
 .history-main {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .history-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: #6b7280;
-  font-size: 1.04rem;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 
@@ -2193,17 +2263,18 @@ input:focus {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  min-height: 28px;
+  min-height: 24px;
   border-radius: 999px;
-  padding: 0 14px;
+  padding: 0 11px;
   background: #dbeafe;
   color: #2f7cff;
+  font-size: 0.86rem;
   font-weight: 850;
 }
 
 .history-type-pill svg {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2.2;
@@ -2228,26 +2299,26 @@ input:focus {
 
 .history-main strong {
   color: #151d2d;
-  font-size: 1.18rem;
+  font-size: 1.02rem;
   line-height: 1.38;
 }
 
 .history-risk-row {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   color: #5d6778;
-  font-size: 1.04rem;
+  font-size: 0.95rem;
   font-weight: 800;
 }
 
 .history-risk-row .badge {
-  min-height: 30px;
+  min-height: 26px;
   border: 0;
   border-radius: 6px;
-  padding: 0 12px;
+  padding: 0 10px;
   color: white;
-  font-size: 0.93rem;
+  font-size: 0.84rem;
   font-weight: 900;
 }
 
@@ -2265,7 +2336,7 @@ input:focus {
 
 .history-actions {
   display: flex;
-  gap: 26px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -2276,14 +2347,14 @@ input:focus {
   border: 0;
   background: transparent;
   color: var(--primary);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 900;
   cursor: pointer;
 }
 
 .link-button svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2.2;
@@ -2300,40 +2371,40 @@ input:focus {
 }
 
 .history-page {
-  max-width: 1700px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 44px clamp(28px, 7vw, 130px) 64px;
+  padding: 44px clamp(24px, 5vw, 96px) 64px;
 }
 
 .history-title {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   text-align: center;
 }
 
 .history-title h1 {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: #254766;
-  font-size: clamp(3.4rem, 4.4vw, 5rem);
+  font-size: clamp(2.6rem, 3.35vw, 3.9rem);
   line-height: 1.05;
 }
 
 .history-title p {
   color: #5a6575;
-  font-size: clamp(1.2rem, 1.7vw, 1.55rem);
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
 }
 
 .clear-history-button {
   position: absolute;
   right: 0;
-  top: 86px;
-  min-height: 44px;
+  top: 72px;
+  min-height: 40px;
   border: 0;
-  border-radius: 12px;
-  padding: 0 22px;
+  border-radius: 10px;
+  padding: 0 18px;
   background: #dc2626;
   color: white;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 850;
   cursor: pointer;
 }
@@ -2341,10 +2412,10 @@ input:focus {
 .history-empty-card {
   display: grid;
   place-items: center;
-  min-height: 360px;
-  padding: 58px 24px;
+  min-height: 300px;
+  padding: 44px 22px;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 14px;
   background: white;
   box-shadow: 0 10px 22px rgba(24, 37, 56, 0.08);
   text-align: center;
@@ -2355,8 +2426,8 @@ input:focus {
 }
 
 .empty-document-icon svg {
-  width: 86px;
-  height: 86px;
+  width: 70px;
+  height: 70px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
@@ -2365,38 +2436,38 @@ input:focus {
 }
 
 .history-empty-card h2 {
-  margin: 20px 0 14px;
+  margin: 16px 0 10px;
   color: #121a2a;
-  font-size: 1.45rem;
+  font-size: 1.25rem;
 }
 
 .history-empty-card p {
   color: #5b6677;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
 .history-start-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 58px;
-  margin-top: 22px;
-  border-radius: 12px;
-  padding: 0 32px;
+  min-height: 48px;
+  margin-top: 18px;
+  border-radius: 10px;
+  padding: 0 26px;
   background: var(--brand-blue);
   color: white;
-  font-size: 1.08rem;
+  font-size: 0.98rem;
   font-weight: 850;
 }
 
 .history-note {
-  margin-top: 40px;
+  margin-top: 32px;
   border: 1px solid #b8d6ff;
   border-radius: 10px;
-  padding: 22px 24px;
+  padding: 18px 20px;
   background: #eef5ff;
   color: #1f4db7;
-  font-size: 1.08rem;
+  font-size: 0.98rem;
 }
 
 .history-note:empty {
@@ -2447,80 +2518,59 @@ input:focus {
 .privacy-page {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 86px 24px 96px;
+  padding: 44px clamp(24px, 5vw, 96px) 64px;
 }
 
 .privacy-hero {
   display: grid;
   justify-items: center;
-  gap: 20px;
-  margin-bottom: 62px;
+  gap: 12px;
+  margin-bottom: 34px;
   text-align: center;
-}
-
-.privacy-icon {
-  display: grid;
-  place-items: center;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  background: #dceaff;
-  color: #2f70e8;
-}
-
-.privacy-icon svg {
-  width: 43px;
-  height: 43px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .privacy-hero h1 {
   margin: 0;
   color: #111827;
-  font-size: clamp(2.8rem, 4.2vw, 4rem);
+  font-size: clamp(2.35rem, 3.35vw, 3.35rem);
   line-height: 1.08;
 }
 
 .privacy-hero p {
   margin: 0;
-  color: #536075;
-  font-size: clamp(1.15rem, 1.65vw, 1.55rem);
-  font-weight: 600;
+  color: #4f5d72;
+  font-size: clamp(1rem, 1.25vw, 1.16rem);
 }
 
 .privacy-content {
-  max-width: 1160px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .privacy-content section {
-  padding: 0 0 46px;
+  padding: 0 0 28px;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 46px;
+  margin-bottom: 28px;
 }
 
 .privacy-content h2 {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   color: #111827;
-  font-size: clamp(1.65rem, 2.4vw, 2.15rem);
+  font-size: clamp(1.18rem, 1.55vw, 1.45rem);
   line-height: 1.15;
 }
 
 .privacy-content p {
   margin: 0;
   color: #526075;
-  font-size: clamp(1.05rem, 1.48vw, 1.35rem);
+  font-size: clamp(0.88rem, 1.05vw, 0.98rem);
   font-weight: 600;
   line-height: 1.55;
 }
 
 .privacy-notice {
   margin-top: 24px;
-  padding: 34px;
+  padding: 18px 20px;
   border: 1px solid #a9ceff;
   border-radius: 12px;
   background: #edf4ff;
@@ -2539,37 +2589,17 @@ input:focus {
 }
 
 .legal-page {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 86px 24px 96px;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 44px clamp(24px, 5vw, 96px) 64px;
 }
 
 .legal-hero {
   display: grid;
   justify-items: center;
-  gap: 20px;
-  margin-bottom: 62px;
+  gap: 12px;
+  margin-bottom: 34px;
   text-align: center;
-}
-
-.legal-icon {
-  display: grid;
-  place-items: center;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  background: #dceaff;
-  color: #2f70e8;
-}
-
-.legal-icon svg {
-  width: 43px;
-  height: 43px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .legal-hero h1 {
@@ -2579,11 +2609,16 @@ input:focus {
   line-height: 1.08;
 }
 
+.terms-page .legal-hero h1,
+.cookie-page .legal-hero h1,
+.privacy-page .privacy-hero h1 {
+  font-size: clamp(2.35rem, 3.25vw, 3.35rem);
+}
+
 .legal-hero p {
-  margin: 0;
-  color: #536075;
-  font-size: clamp(1.15rem, 1.65vw, 1.55rem);
-  font-weight: 600;
+    margin: 0;
+    color: #4f5d72;
+    font-size: clamp(1rem, 1.25vw, 1.16rem);
 }
 
 .legal-content {
@@ -2612,9 +2647,32 @@ input:focus {
   line-height: 1.55;
 }
 
+.terms-page .legal-content,
+.cookie-page .legal-content {
+  max-width: 900px;
+}
+
+.terms-page .legal-content section,
+.cookie-page .legal-content section {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+}
+
+.terms-page .legal-content h2,
+.cookie-page .legal-content h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.18rem, 1.55vw, 1.45rem);
+}
+
+.terms-page .legal-content p,
+.cookie-page .legal-content p {
+  font-size: clamp(0.88rem, 1.05vw, 0.98rem);
+  line-height: 1.55;
+}
+
 .legal-disclaimer {
   margin-top: 24px;
-  padding: 34px;
+  padding: 18px 20px;
   border: 1px solid #f6d46d;
   border-radius: 12px;
   background: #fff9e8;
@@ -2842,7 +2900,7 @@ input:focus {
   }
 
   .privacy-hero {
-    margin-bottom: 42px;
+    margin-bottom: 34px;
   }
 
   .privacy-content section {
@@ -2859,7 +2917,7 @@ input:focus {
   }
 
   .legal-hero {
-    margin-bottom: 42px;
+    margin-bottom: 34px;
   }
 
   .legal-content section {
