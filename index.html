@@ -375,6 +375,38 @@
         </section>
       </div>
 
+      <div id="support-modal" class="scam-modal support-modal" hidden>
+        <div class="scam-modal-backdrop" data-support-close></div>
+        <section class="scam-modal-card support-modal-card" role="dialog" aria-modal="true" aria-labelledby="support-modal-title">
+          <header class="scam-modal-header">
+            <h2 id="support-modal-title">Contact Support</h2>
+            <p>Reach VETO support for scam detection questions.</p>
+          </header>
+          <div class="scam-modal-body support-modal-body">
+            <div class="support-contact-list">
+              <a class="support-contact-row" href="mailto:support@scamdetection.system">
+                <span class="support-contact-icon" aria-hidden="true">✉</span>
+                <span class="support-contact-copy">
+                  <span>Email</span>
+                  <strong>support@scamdetection.system</strong>
+                </span>
+              </a>
+              <a class="support-contact-row" href="tel:+60312345678">
+                <span class="support-contact-icon" aria-hidden="true">☎</span>
+                <span class="support-contact-copy">
+                  <span>Phone</span>
+                  <strong>+60 3-1234 5678</strong>
+                </span>
+              </a>
+            </div>
+            <div class="scam-modal-actions">
+              <button class="modal-secondary" type="button" data-support-close>Close</button>
+              <a class="modal-primary" href="mailto:support@scamdetection.system?subject=VETO%20Support%20Request">Send Email</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
       <section id="guide-view" class="view">
         <div class="guide-page">
           <h1>Security Guides &amp; Anti-Fraud Center</h1>
@@ -623,7 +655,7 @@
           </div>
 
           <div class="faq-support">
-            <p>Still have questions? <a href="#about">Contact Support</a></p>
+            <p>Still have questions? <button class="faq-support-link" type="button" data-support-open>Contact Support</button></p>
             <span>Stay safe online. Always verify suspicious content before taking action.</span>
           </div>
         </div>
@@ -632,9 +664,6 @@
       <section id="privacy-view" class="view">
         <div class="privacy-page">
           <header class="privacy-hero">
-            <span class="privacy-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-2.9 8.5-7 10-4.1-1.5-7-5.4-7-10V6z" /></svg>
-            </span>
             <h1>Privacy Policy</h1>
             <p>How we collect, use and protect your information</p>
           </header>
@@ -685,10 +714,6 @@
               <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at privacy@scamdetection.system or through our support page.</p>
             </section>
 
-            <aside class="privacy-notice">
-              <h2>Important Notice</h2>
-              <p>The Scam Detection System is designed for educational and informational purposes as part of a Final Year Project. It should not be used to store or process highly sensitive or personally identifiable information. Always exercise caution when sharing personal data online.</p>
-            </aside>
           </div>
         </div>
       </section>
@@ -696,9 +721,6 @@
       <section id="terms-view" class="view">
         <div class="legal-page terms-page">
           <header class="legal-hero">
-            <span class="legal-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z" /><path d="M14 3v5h5" /><path d="M10 12h5M10 16h5" /></svg>
-            </span>
             <h1>Terms of Service</h1>
             <p>Please read these terms carefully before using our service</p>
           </header>
@@ -754,24 +776,47 @@
               <p>If you have questions about these Terms of Service, please contact us at support@scamdetection.system or through our support page.</p>
             </section>
 
-            <aside class="legal-disclaimer">
-              <h2>Important Disclaimer</h2>
-              <p>This system is a Final Year Project developed for educational purposes. While it uses real machine learning techniques, it should not be considered a replacement for professional security services or legal advice. Always verify suspicious content through multiple trusted sources before making important decisions.</p>
-            </aside>
           </div>
         </div>
       </section>
 
-      <section id="about-view" class="view">
-        <div class="page-shell document-page">
-          <p class="eyebrow">Transparency</p>
-          <h1>AI Statement</h1>
-          <p>How artificial intelligence is used in this system.</p>
-          <section><h2>Purpose of AI in the System</h2><p>Machine learning is used to classify suspicious content as scam/fake or legitimate.</p></section>
-          <section><h2>OCR and Speech-to-Text Usage</h2><p>OCR extracts text from images and speech-to-text converts voice recordings into text for the same classifier.</p></section>
-          <section><h2>Transparency and Explainability</h2><p>Results include suspicious keywords, URL risk factors, risk score, and simple action guidance.</p></section>
+      <section id="cookies-view" class="view">
+        <div class="legal-page cookie-page">
+          <header class="legal-hero">
+            <h1>Cookie Settings</h1>
+            <p>Manage browser storage and cookie preferences for VETO</p>
+          </header>
+
+          <div class="legal-content">
+            <section>
+              <h2>Essential Browser Storage</h2>
+              <p>VETO uses local browser storage to keep scam check history on your device. This helps you review previous checks without storing sensitive content in a public account.</p>
+            </section>
+
+            <section>
+              <h2>Analysis Preferences</h2>
+              <p>The prototype does not use advertising cookies. Submitted text, extracted image text, voice transcripts, and URLs are used only to support the scam checking flow.</p>
+            </section>
+
+            <section>
+              <h2>Clearing Your Data</h2>
+              <p>You can remove saved history from the View History page using Clear All. You can also clear local browser data through your browser settings at any time.</p>
+            </section>
+
+            <section>
+              <h2>Third-Party Services</h2>
+              <p>Future OCR, speech-to-text, or URL analysis services may use technical cookies or temporary session data required to process requests safely.</p>
+            </section>
+
+            <section>
+              <h2>Contact Information</h2>
+              <p>If you have questions about cookies or browser storage, please contact us at privacy@scamdetection.system or through our support page.</p>
+            </section>
+
+          </div>
         </div>
       </section>
+
     </main>
 
     <footer class="footer" aria-label="Site footer">
@@ -793,7 +838,7 @@
             <a href="#faq">FAQ</a>
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms of Service</a>
-            <a href="#about">Cookie Settings</a>
+            <a href="#cookies">Cookie Settings</a>
           </nav>
         </div>
         <div class="footer-bottom">
