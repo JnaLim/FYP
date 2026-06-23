@@ -7,7 +7,7 @@
 - Main project rule file: `AGENTS.md`
 - Project memory folder: `project-docs/`
 - Current prototype app: `scam-detection-web/`
-- Current workflow change: static frontend prototype for a web-based scam detection system.
+- Current workflow change: React + Vite frontend prototype for a web-based scam detection system.
 
 ## Current Branch
 
@@ -27,4 +27,5 @@
 - This repo has strict upstream contribution expectations; changes intended for upstream must follow `CLAUDE.md` and the pull request template.
 - Pushing to the remote should happen only after explicit user approval and local verification.
 - `scam-detection-web/` currently uses browser-side mock analysis for frontend flow only; it is not a trained ML model.
+- The frontend now requires Node/npm dependencies to run the Vite dev server or production build.
 - The prototype does not store sensitive content on a backend, but local history is stored in browser `localStorage`.

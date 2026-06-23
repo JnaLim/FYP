@@ -1,5 +1,100 @@
 # Progress Log
 
+## 2026-06-20
+
+- Updated the Pricing page into an `Upgrade Plan` page with the new subtitle, a `Your Current Plan` card, and an `Available Plans` heading before the Free/Student/Pro cards.
+- Changed current-plan wording from `Current Plan Summary` to `Your Current Plan`, renamed the feature list to `Current features`, shortened the prototype note, and changed logged-in plan selection feedback to `Plan selection preview only.`
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for `Pricing.jsx` and `styles.css`, and confirmed Settings has no Plan Summary while the dropdown still links Upgrade plan to `/pricing`; all checks passed.
+
+- Ensured Contact Support always returns to the normal support form after the modal closes or is reopened by resetting state when `open` becomes false.
+- Kept the success auto-close on the same page and preserved the existing `vetoSupportMessages` localStorage write behavior.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for `SupportModal.jsx`, and confirmed the modal still has no route navigation while storage still writes to `vetoSupportMessages`; all checks passed.
+
+- Fixed the Contact Support success close flow so the modal shows `Your message has been sent.`, closes after about one second, and returns the user to the same page without navigation.
+- Added modal reset handling so after close, `isSending`, `isSent`, error/success messages, and editable subject/message fields are cleared before the next open.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for `SupportModal.jsx`, and confirmed support storage still writes to `vetoSupportMessages` while `SupportModal.jsx` has no route navigation; all checks passed.
+
+- Changed Contact Support submit into a full modal loading flow that replaces the form with a VETO analyzing-style state: large spinner, `Sending Message`, admin-team subtitle, and animated progress bar.
+- After saving to the existing `vetoSupportMessages` localStorage key, the modal now shows `Your message has been sent.` briefly and then closes automatically while clearing only subject/message.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched modal files, and confirmed the full loading state plus unchanged support storage key/write with `rg`; all checks passed.
+
+- Updated Contact Support feedback to feel closer to the scam check loading state, with a compact centered spinner/progress panel while sending and a matching sent confirmation panel after completion.
+- Kept the `Your message has been sent.` success copy and the existing `vetoSupportMessages` localStorage write behavior unchanged.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched modal files, and confirmed the support feedback panel plus unchanged support storage key with `rg`; all checks passed.
+
+- Improved Contact Support submit feedback by replacing the old prototype success copy with validation, a `Sending...` loading state, inline spinner, and final `Your message has been sent.` confirmation.
+- Subject and message are now required before saving; valid sends wait briefly, store the same `vetoSupportMessages` object in localStorage, and clear only the editable subject/message fields.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched modal files, and confirmed the old success copy is gone while the support storage key and localStorage write remain; all checks passed.
+
+- Made the Contact Support modal more compact by reducing the desktop width to 460px, tightening the header/body padding, and keeping mobile width around 90%.
+- Added a dedicated support action row with a 12px button gap and changed the close action label to `Cancel`; submit/localStorage behavior remains unchanged.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed modal width, button spacing, and unchanged `vetoSupportMessages` storage with `rg`; all checks passed.
+
+- Restyled the Contact Support modal back to match the existing Scam Types modal treatment: dark blue gradient header, larger rounded card, stronger overlay, and no icon block.
+- Kept the support message form and `vetoSupportMessages` localStorage submit behavior unchanged.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched modal files, and confirmed the shared scam-style gradient plus unchanged support storage logic with `rg`; all checks passed.
+
+- Updated the Contact Support modal header into a VETO-blue gradient top section with a reused message icon, white title, and light-blue subtitle.
+- Kept the modal form body white, removed the extra prototype-only note from the modal UI, and preserved the existing localStorage support-message submit behavior.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for `SupportModal.jsx` and `styles.css`, and confirmed the new modal header selectors/text with `rg`; all checks passed.
+
+- Adjusted Contact Support and Admin Support Messages colors to better match the VETO blue/white design system.
+- Contact Support readonly name/email fields now use a soft disabled style, success feedback uses a soft blue treatment, and support inbox statuses use blue for New and neutral grey for Read.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed updated support/status/readonly selectors with `rg`; all checks passed.
+
+- Implemented prototype Contact Support messaging with `vetoSupportMessages` in localStorage.
+- Contact Support modal now collects name, email, subject, and message, stores a mock support message, clears the form, and shows a prototype success message.
+- Admin Dashboard now shows a New Support Messages count, Support Messages inbox, View detail modal, Mark as Read, Delete, and an empty state.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed support storage key, modal success text, admin inbox labels, and message actions with `rg`; all checks passed.
+
+- Removed `Profile` from the user avatar dropdown and kept only `Upgrade plan`, `Settings`, `View History`, and `Log out`.
+- Removed Plan Summary from Settings; Settings now contains only Account Details, Password, and form actions.
+- Moved Current Plan Summary to the top of the Pricing page, with mock usage, plan features, and a prototype-only plan-change note; `/profile` now redirects to `/settings`.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed dropdown, Settings, Pricing, and `/profile` redirect labels/routes with `rg`; all checks passed.
+
+- Reworked the Settings page so editable account details, password update, form actions, and Plan Summary are visually and behaviorally separated.
+- `Save Changes` now only updates the mock full-name preview message, `Update Password` only handles password-field feedback, and `Upgrade Plan` routes to `/pricing`.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed the required Settings section labels/actions with `rg`; all checks passed.
+
+- Removed `Pricing` from the logged-in user header and kept it in the footer plus the profile dropdown `Upgrade plan` action.
+- Updated the profile dropdown to remove the small link icon beside `Jeana Lim` and added `View History` as a user activity item.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed header/footer/dropdown route labels with `rg`; all checks passed.
+
+- Updated the logged-in user profile dropdown to a modern account menu with `JL` avatar, user summary (`Jeana Lim`, `Free Plan`), grouped menu items with icons, and a bottom `Log out` action.
+- Kept the user header links unchanged and did not affect the admin-only header or admin flow.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed dropdown labels/routes plus absence of `Personalization` and `Help` with `rg`; all checks passed.
+
+- Replaced the logged-in user header `Settings`/text logout controls with a profile icon dropdown.
+- Added protected `/profile`, `/plan`, and `/preferences` pages with mock user data and UI-only save/upgrade actions; `/settings` now redirects to `/profile`.
+- The profile dropdown contains `User Profile`, `My Plan`, `Scan History`, `Preferences`, and `Logout`, and keeps admin layout unchanged.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed protected routes, dropdown labels, logout target, and old `/settings` redirect with `rg`; all checks passed.
+
+- Added a protected user Settings page at `/settings` for mock personal details, security fields, preferences, and UI-only save/cancel actions.
+- Updated the logged-in user header to show only `Check Now`, `Features`, `Scam Types`, `Guide`, `Pricing`, `Settings`, and `Logout`.
+- Moved secondary links into the footer, including `How It Works`, `View History`, `FAQ`, `Privacy Policy`, `Terms of Service`, `AI Statement`, `Contact Support`, and `Admin Login`.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed `/settings`, user header links, footer links, and mock save text with `rg`; all checks passed.
+
+- Removed the normal user dashboard from the active user flow.
+- The logged-in user header no longer shows `Account`, and `/user` now redirects back to the protected home page instead of rendering a dashboard.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed the user dashboard import/header link were removed from the active route/header flow with `rg`; all checks passed.
+
+- Added login-first route protection for the VETO frontend prototype.
+- User routes now require `vetoUserLoggedIn`; User Login sets that mock localStorage value and redirects to `/`, while user logout removes it and returns to `/user-login`.
+- Admin routes now require `vetoAdminLoggedIn`; Admin Login sets that mock localStorage value and redirects to `/admin`, while admin logout removes it and returns to `/admin-login`.
+- Split layouts by route: login pages use a minimal logo header, logged-in user pages use the normal VETO header/footer, and admin pages use an admin-only header without user website links.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed mock localStorage state, protected routes, header layouts, pricing CTA, and logout targets with `rg`; all checks passed.
+
+- Added mock User Dashboard, Admin Dashboard, and Pricing pages to the React/Vite VETO frontend.
+- Added `/user`, `/admin`, and `/pricing` routes, plus header navigation for Pricing and a compact Dashboard menu for user/admin dashboards.
+- Kept all new functionality frontend-only with mock data and UI-only actions; no backend, authentication, payment, database, or model upload behavior was added.
+- Verification: ran `npm run build` in `scam-detection-web/` and `git diff --check` for the touched files; both passed.
+- Added mock User Login and Admin Login pages with `/user-login` and `/admin-login` routes.
+- Updated public header navigation to show Pricing plus Account login links instead of direct dashboard links; Pricing CTAs now route to User Login.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed login routes/navigation/redirect targets with `rg`; all checks passed.
+- Kept User Login and Admin Login as fully separate pages and added mock Logout buttons to both User Dashboard and Admin Dashboard.
+- Updated the public header to show direct `User Login` and `Admin Login` links, with no public dashboard links.
+- Verification: ran `npm run build` in `scam-detection-web/`, ran `git diff --check` for the touched files, and confirmed route/navigation/logout targets with `rg`; all checks passed.
+
 ## 2026-06-08
 
 - Updated the result page action button (`Check Another`, `Review Again`, or `Start New Check`) so it routes directly to the standalone main Check page.
@@ -272,3 +367,26 @@
 - Verification: ran `git diff --check`, served the app with `python3 -m http.server 4173`, confirmed `HTTP/1.0 200 OK` for `/`, `/styles.css`, and `/app.js`, then stopped the local preview server.
 - Removed the Privacy Policy, Terms of Service, and Cookie Settings bottom notice/disclaimer boxes to match the requested legal page layout.
 - Verification: ran `rg` to confirm `Prototype Notice`, `Important Disclaimer`, and `Important Notice` were removed from `index.html`, then ran `git diff --check`.
+
+## 2026-06-17
+
+- Migrated `scam-detection-web/` from a static HTML/CSS/JavaScript prototype to a React + Vite + JavaScript frontend.
+- Converted the existing page views, checking panels, result flow, modals, FAQ support action, guide tabs, and local history behavior into React state-driven JSX while reusing the existing `styles.css` and image assets to preserve the current UI.
+- Replaced the old direct DOM script entry with `src/main.jsx`, `src/App.jsx`, `package.json`, and `vite.config.js`.
+- Verification: ran `git diff --check`; checked that no `innerHTML`, `style.display`, old inline `onclick`/`onchange`, or JSX `class=` usage remains in the React entry files. `node` and `npm` are not installed in this environment, so the Vite build could not be run here.
+
+## 2026-06-18
+
+- Added a compact React layout recovery CSS layer for Guide, Scam Types, View History, FAQ, Privacy Policy, Terms of Service, Cookie Settings, and result pages.
+- Tightened page headings, cards, tabs, document text, history rows, legal/FAQ spacing, and responsive layout so the migrated React app keeps the VETO visual scale.
+- Fixed result page alignment for status check rows and highlighted term pills, and reinforced the analyzing/loading overlay styling.
+- Confirmed the Contact Support modal exposes email, phone, and a Send Email action, and confirmed the old notice/AI statement blocks are no longer present in the React view.
+- Verification: ran `git diff --check` and `npm run build`; both passed. The build emitted only the local RVM `ps` permission warning before completing successfully.
+
+## 2026-06-19
+
+- Modularized the single-file React application into separate components, views, sections, data datasets, and utils modules.
+- Integrated React Router (v8) nested routing configuration inside `src/main.jsx` and added dynamic props mapping for template documents.
+- Converted all hash-based navigation links to React Router `<Link>` components, and implemented smooth scroll animations for layout hashes (`#features`, `#how-it-works`).
+- Replaced direct history state bindings with localized contexts via React Router `Outlet` context, and optimized components state encapsulation.
+- Verification: ran `npm run build` which successfully completed without any import or type resolution errors.
