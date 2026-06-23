@@ -23,7 +23,7 @@ Current prototype functions include:
 11. Contact Support modal that stores messages in local storage.
 12. Admin Dashboard for mock system monitoring, model metrics, system logs, and support messages.
 
-## Planned AI Model Scope
+## AI Model Scope
 
 The system is planned to include three separate AI models. This section is ongoing and will be implemented progressively.
 
